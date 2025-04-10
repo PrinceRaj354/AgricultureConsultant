@@ -10,6 +10,10 @@ A web application that uses DETR (Detection Transformer) for plant disease detec
 - Weather-based care tips
 - Support for multiple plant diseases
 
+## Live
+
+- "https://agricutureconsultant.netlify.app/"
+
 ## Setup
 
 1. Install Python dependencies:
