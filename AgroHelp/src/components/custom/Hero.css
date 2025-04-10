@@ -1,0 +1,330 @@
+/* Hero section styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff9e6; /* Cream background */
+}
+
+.heading {
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 32px;
+  color: #244855; /* Dark blue color */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Hero buttons styles */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.hero-button {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 72, 85, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(36, 72, 85, 0.85), rgba(36, 72, 85, 0.4), transparent);
+  padding: 20px;
+  transform: translateY(70%);
+  transition: transform 0.3s ease;
+  text-align: left;
+  color: white;
+}
+
+.button-overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.button-overlay p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1.4;
+}
+
+.hero-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button:hover::before {
+  opacity: 0.3;
+}
+
+.hero-button:hover .button-overlay {
+  transform: translateY(0);
+}
+
+.hero-button:hover .button-overlay p {
+  opacity: 1;
+}
+
+/* About section styles */
+.about-section {
+  max-width: 800px;
+  margin-top: 40px; /* Add space above the about section */
+  padding: 30px;
+  background-color: #761717;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  font-size: 24px;
+  color: #244855;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact section styles */
+.contact-section {
+  max-width: 800px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  font-size: 24px;
+  color: #244855;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  background-color: rgba(36, 72, 85, 0.1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contact-item h3 {
+  font-size: 18px;
+  color: #244855;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  color: #555;
+  font-size: 14px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-form h3 {
+  font-size: 18px;
+  color: #244855;
+  margin-bottom: 15px;
+}
+
+.contact-input, .contact-textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-button {
+  background-color: #244855;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover:not(:disabled) {
+  background-color: #1a3540;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.success-message {
+  margin-top: 15px;
+  color: #2c6e49;
+  background-color: rgba(44, 110, 73, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Existing simple-text-section styles can remain for backward compatibility */
+.simple-text-section h7 {
+  display: block;
+  font-size: 24px;
+  color: #244855;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.simple-text-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-button {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .hero-buttons {
+    gap: 15px;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .button-overlay {
+    transform: translateY(60%);
+  }
+  
+  .button-overlay h3 {
+    font-size: 16px;
+  }
+  
+  .button-overlay p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-button {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .hero-title {
+    font-size: 24px;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+  }
+  
+  .button-overlay {
+    padding: 10px;
+    transform: translateY(50%);
+  }
+  
+  .button-overlay h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .button-overlay p {
+    font-size: 10px;
+  }
+} 

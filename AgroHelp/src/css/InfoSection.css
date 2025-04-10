@@ -1,0 +1,58 @@
+.info-section {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #2c2c2c; /* Dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+    color: #ffffff; /* Light text color */
+}
+
+.info-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info-header {
+    margin: 20px 0;
+}
+
+.info-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.info-detail {
+    flex: 1;
+    min-width: 120px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #007bff; /* Blue border for dark theme */
+    border-radius: 5px;
+    background-color: #3a3a3a; /* Darker card background */
+}
+
+.info-detail h3 {
+    color: #ffffff; /* Light text for details */
+}
+
+.info-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff; /* Light text color */
+    background-color: #007bff; /* Blue background for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

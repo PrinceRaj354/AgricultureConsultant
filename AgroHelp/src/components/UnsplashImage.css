@@ -1,0 +1,75 @@
+.unsplash-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.unsplash-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.unsplash-image-container:hover .unsplash-image {
+  transform: scale(1.05);
+}
+
+.unsplash-attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.unsplash-image-container:hover .unsplash-attribution {
+  opacity: 1;
+}
+
+.unsplash-attribution a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.unsplash-attribution a:hover {
+  color: #eee;
+}
+
+/* Size variants */
+.unsplash-image-container.small {
+  max-width: 300px;
+}
+
+.unsplash-image-container.thumb {
+  max-width: 200px;
+}
+
+/* Circular variant for thumbnails */
+.unsplash-image-container.circular {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.unsplash-image-container.circular .unsplash-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .unsplash-attribution {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+} 

@@ -1,0 +1,373 @@
+.weather-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.weather-page.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #4caf50;
+}
+
+.loading-spinner i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.weather-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.weather-header h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.weather-search-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.weather-search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.weather-search-input:focus {
+  border-color: #4caf50;
+}
+
+.weather-search-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.weather-search-button:hover {
+  background-color: #388e3c;
+}
+
+.weather-error {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.current-weather {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.current-weather h2 {
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.current-weather-details {
+  display: flex;
+  align-items: center;
+}
+
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.weather-icon img {
+  width: 120px;
+  height: 120px;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+.detail {
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 8px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.forecast {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.forecast h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.forecast-items {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.forecast-item {
+  min-width: 120px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+}
+
+.forecast-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.forecast-icon {
+  margin: 10px 0;
+}
+
+.forecast-temp {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.max {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.min {
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Loading and error states */
+.weather-loading, 
+.weather-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+}
+
+.weather-loading i,
+.weather-error i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.weather-loading i {
+  color: #3498db;
+}
+
+.weather-error i {
+  color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .weather-page {
+    margin: 15px;
+    padding: 15px;
+  }
+  
+  .weather-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .weather-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .detail {
+    min-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-page {
+    padding: 10px;
+  }
+  
+  .current-weather,
+  .forecast {
+    padding: 15px;
+  }
+  
+  .detail {
+    min-width: 100%;
+  }
+  
+  .temperature {
+    font-size: 2.5rem;
+  }
+}
+
+/* Weather notification for errors that don't prevent display */
+.weather-notification {
+  background-color: #fff8e1;
+  border-left: 4px solid #ffc107;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.weather-notification i {
+  color: #ff9800;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.weather-notification p {
+  margin: 0;
+  color: #5d4037;
+}
+
+/* Farming tips section */
+.farming-tips {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+.farming-tips h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.tip {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  border-left: 4px solid #4caf50;
+}
+
+.tip i {
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.tip h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.tip p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for farming tips */
+@media (max-width: 768px) {
+  .tips-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .tip {
+    margin-bottom: 10px;
+  }
+} 
