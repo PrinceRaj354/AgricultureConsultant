@@ -54,15 +54,6 @@ The application uses a DETR (Detection Transformer) model for plant disease dete
 - `POST /predict`: Upload an image for disease detection
 - `GET /uploads/<filename>`: Access uploaded images
 
-## Environment Variables
-
-Create a `.env` file in the root directory with:
-
-```
-OPENWEATHER_API_KEY=your_api_key_here
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
 ## Required API Keys
 
 The application requires the following API keys:
