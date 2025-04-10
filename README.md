@@ -23,18 +23,23 @@ cd AgroHelp
 npm install
 ```
 
-3. Start the backend server:
+3. Add API keys in the following files:
+   - `AgroHelp/src/context/WeatherContext.jsx` - Add your OpenWeatherMap API key as `OpenWeatherMap_API`
+   - `AgroHelp/src/service/AIModal.jsx` - Add your Gemini API key as `Gemini_API`
+   - `AgroHelp/src/Weather.jsx` - Add your OpenWeatherMap API key as `OpenWeatherMap_API`
+
+4. Start the backend server:
 ```bash
 python app.py
 ```
 
-4. Start the frontend development server:
+5. Start the frontend development server:
 ```bash
 cd AgroHelp
 npm run dev
 ```
 
-5. Open your browser and navigate to `http://localhost:5173`
+6. Open your browser and navigate to `http://localhost:5173`
 
 ## Model Information
 
@@ -55,7 +60,17 @@ Create a `.env` file in the root directory with:
 
 ```
 OPENWEATHER_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
 ```
+
+## Required API Keys
+
+The application requires the following API keys:
+1. **OpenWeatherMap API**: Used for weather data in `WeatherContext.jsx` and `Weather.jsx`
+   - Sign up at [OpenWeatherMap](https://openweathermap.org/api)
+   
+2. **Google Gemini API**: Used for AI features in `AIModal.jsx`
+   - Get API key from [Google AI Studio](https://ai.google.dev/)
 
 ## Contributing
 
