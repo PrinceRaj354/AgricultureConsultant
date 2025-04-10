@@ -1,0 +1,10 @@
+flask==2.0.1
+flask-cors==3.0.10
+torch==2.0.1
+torchvision==0.15.2
+Pillow==9.5.0
+transformers==4.30.2
+numpy==1.24.3
+requests==2.31.0
+python-dotenv==1.0.0
+timm==0.9.2  # Required for MobileNet V2 

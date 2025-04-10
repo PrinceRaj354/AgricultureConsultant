@@ -1,0 +1,46 @@
+# Python virtualenv
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ML models and large files
+*.pth
+*.keras
+*.h5
+*.pb
+*.onnx
+*.tflite
+*.mlmodel
+*.pt
+*.bin
+*.weights
+*.dll
+*.lib
+models/
+cmrit_model.pth
+best_model.keras
+mobilenet_v2_1.0_224-plant-disease-identification/
+*torch_cpu.dll
+*dnnl.lib
+
+# Environment variables
+.env
+**/.env
+AgroHelp/.env
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Other large files
+*.zip
+*.rar
+*.7z
+*.tar.gz
+uploads/
+
+# Logs
+*.log 
