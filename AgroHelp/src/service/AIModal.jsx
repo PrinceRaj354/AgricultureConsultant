@@ -1,6 +1,6 @@
 import {GoogleGenerativeAI} from "@google/generative-ai";
 
-const apiKey = "AIzaSyDqCcGio6G_eRVH7SCwEnr1TxqCbWPIGeA";
+const apiKey = "Add Your Gemini Key here";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -26,7 +26,7 @@ export const chatSession = model.startChat({
 
 // import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// const apiKey = "AIzaSyDdZSs9LtVUkTG4NYd2LYNIKq200_OLeUg";
+// const apiKey = "";
 // const genAI = new GoogleGenerativeAI(apiKey);
 
 // const model = genAI.getGenerativeModel({
