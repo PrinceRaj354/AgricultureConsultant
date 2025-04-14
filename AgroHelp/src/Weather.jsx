@@ -13,7 +13,7 @@ const Weather = () => {
     setLoading(true);
     setError(null);
 
-    const API_KEY = '11c43cf0e3d7548c39f51012d0e46acb';
+    const API_KEY = 'Add Your weather api key';
     let url;
 
     if (customCityName) {
