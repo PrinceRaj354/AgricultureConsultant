@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import '../../css/Chatbot.css';
 
 // Initialize the Gemini API with the provided key
-const apiKey = "AIzaSyDqCcGio6G_eRVH7SCwEnr1TxqCbWPIGeA";
+const apiKey = "Gemini API";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 // Create model with the same configuration as in AIModal.jsx
