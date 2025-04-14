@@ -2,7 +2,7 @@
  * Utility functions for fetching images from Unsplash API
  */
 
-const UNSPLASH_ACCESS_KEY = 'SX3_F-rZnChWLt5efGlaxBwYjb2ZzPKSGi_oS6MSAWg';
+const UNSPLASH_ACCESS_KEY = 'Add Here';
 
 /**
  * Fetches an image from Unsplash based on a keyword
